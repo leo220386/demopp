@@ -1,0 +1,30 @@
+<ion-header class="walkthrough-header">
+  <ion-toolbar>
+    <ion-buttons end>
+	<!--
+      <button ion-button class="skip-button" (click)="skipIntro()" [hidden]="lastSlide">{{'SKIP' | translate}}</button>
+	  -->
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="walkthrough-content login-content auth-content">
+  <ion-slides #slider (ionSlideDidChange)="onSlideChanged()" pager="true">
+    <ion-slide class="slide-4">
+      <ion-row class="intro-image-row">
+        <ion-col center width-64 no-padding>
+          <preload-image [ratio]="{w:1, h:1}" src="https://www.heineken.com/mx/~/resources/Heineken/Shared/Logo/logo.svg?v=00010101_000000&la=en&hash=1DEA1C956F3F2CBE9F54C2CC901E5F78C512ECA9" alt="Heineken - Open Your World" title="ion2FullApp"></preload-image>
+        </ion-col>
+      </ion-row>
+      <h2 class="main-title">{{'WELCOME!' | translate}}</h2>
+      <p class="intro-text">
+        This is the new <br/>
+		<b>Heineken Mobile App</b>
+      </p>
+	  <p></p>
+	  <button ion-button block class="facebook-auth-button" (click)="doFacebookLogin()">Log in with Facebook</button>
+	  <br/>
+      <button ion-button block class="auth-action-button login-button" (click)="doLogin()">{{'LOG_IN' | translate}}</button>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

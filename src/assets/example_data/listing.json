@@ -1,0 +1,95 @@
+{
+    "banner_image": "./assets/images/listing/top-offers.jpg",
+    "banner_title": "Top Offers",
+    "populars": [
+        {
+            "title": "12 Botellas",
+            "image": "./assets/images/listing/1.jpg",
+			"desc": "Cerveza clara Heineken 12 botellas de 355 ml c/u. Prepárate para tus próximas reuniones y no olvides tener lista tus bebidas para fiestas, así como una mesa de botanas, con la .",
+			"price":192.00
+        },
+        {
+            "title": "Barril 5 l",
+            "image": "./assets/images/listing/2.jpg",
+			"desc":"Cerveza Heineken 5 l, 5.0% Alc. Vol.",
+			"price":289.00
+        },
+        {
+            "title": "1 Litro",
+            "image": "./assets/images/listing/3.webp",
+			"desc":"Cerveza Heineken 1 Litro",
+			"price":152.99
+        },
+        {
+            "title": "Lata 473 Ml",
+            "image": "./assets/images/listing/4.webp",
+			"desc":"Heineken Lata 473 Ml",
+			"price":30.86
+        },
+        {
+            "title": "1 Litro Retornable",
+            "image": "./assets/images/listing/6.webp",
+			"desc":"Cerveza Heineken Litro Retornable",
+			"price":48.16
+        },
+        {
+            "title": "Lata De 500cc",
+            "image": "./assets/images/listing/7.webp",
+			"desc":"Lata Heineken De 500cc",
+			"price":25.99
+        }
+    ],
+    "categories": [
+        {
+			"store": "Alianza",
+			"storeImg": "./assets/images/listing/bodegas-alianza-logo.jpg",
+            "title": "12 Botellas",
+            "image": "./assets/images/listing/1.jpg",
+			"desc": "Cerveza clara Heineken 12 botellas de 355 ml c/u. Prepárate para tus próximas reuniones y no olvides tener lista tus bebidas para fiestas, así como una mesa de botanas, con la .",
+			"price":"$ 192.00",
+			"special":true
+        },
+        {
+			"store": "Europea",
+			"storeImg": "./assets/images/listing/logo-la-europea.png",
+            "title": "Barril 5 l",
+            "image": "./assets/images/listing/2.jpg",
+			"desc":"Cerveza Heineken 5 l, 5.0% Alc. Vol.",
+			"price":"$ 289.00"
+        },
+        {
+			"store": "Superama",
+			"storeImg": "./assets/images/listing/logo_superama.jpg",
+            "title": "1 Litro",
+            "image": "./assets/images/listing/3.webp",
+			"desc":"Cerveza Heineken 1 Litro",
+			"price":"$ 152.99",
+			"special":true
+        },
+        {
+			"store": "Alianza",
+			"storeImg": "./assets/images/listing/bodegas-alianza-logo.jpg",
+            "title": "Lata 473 Ml",
+            "image": "./assets/images/listing/4.webp",
+			"desc":"Heineken Lata 473 Ml",
+			"price":"$ 30.86",
+			"special":true
+        },
+        {
+			"store": "Europea",
+			"storeImg": "./assets/images/listing/logo-la-europea.png",
+            "title": "1 Litro Retornable",
+            "image": "./assets/images/listing/5.webp",
+			"desc":"Cerveza Heineken Litro Retornable",
+			"price":"$ 48.16"
+        },
+        {
+			"store": "Superama",
+			"storeImg": "./assets/images/listing/logo_superama.jpg",
+            "title": "Lata De 500cc",
+            "image": "./assets/images/listing/7.webp",
+			"desc":"Lata Heineken De 500cc",
+			"price":"$ 25.99"
+        }
+	]
+}

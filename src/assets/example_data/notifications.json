@@ -1,0 +1,48 @@
+{
+    "today":[
+      {
+        "name": "Carlsberg declined 2% in India in 2017",
+        "image": "./assets/images/notifications/1.jpg",
+        "message": "2017 was a very volatile year for our Indian business due to the highway ban and the introduction of ...",
+        "date": "5:03 pm"
+      },
+      {
+        "name": "Conventional presents are passé: Virtual gifting has become the new trend",
+        "image": "./assets/images/notifications/2.jpg",
+        "message": "Now, surprise your friends with memorable experiences or a case of chilled beer.",
+        "date": "2:54 pm"
+      },
+      {
+        "name": "UBL eyes 25% share in imported beer market in next 18 months",
+        "image": "./assets/images/notifications/3.jpg",
+        "message": "The Bengaluru-based company has introduced in India five brands -- Sol, Edelweiss, Affligem, Dos Equis and Desperados. Heineken's stable in select cities like Delhi, Mumbai and Hyderabad.",
+        "date": "1:54 pm"
+      }
+    ],
+    "yesterday":[
+      {
+        "name": "Carlsberg blames GST, ban for volume dip",
+        "image": "./assets/images/notifications/4.jpg",
+        "message": "Prices have been increased to offset the GST impact,” said Carlsberg CFO Heine Dalsgaard, after declaring Q3 performance, which saw net revenue slip 1%.",
+        "date": "9:11 pm"
+      },
+      {
+        "name": "Heineken picks up United Breweries shares worth Rs 179 crore",
+        "image": "./assets/images/notifications/5.jpg",
+        "message": "Heineken International today consolidated its stake in United Breweries by picking up over 21 lakh shares of Mallya-led firm for Rs 179 crore through open market transactions.",
+        "date": "3:09 pm"
+      },
+      {
+        "name": "Heineken buys brewing stakes from Diageo for $781 mn",
+        "image": "./assets/images/notifications/6.jpg",
+        "message": "Heineken NV, the world's second-biggest brewer by sales, took control of two joint ventures from partner Diageo Plc, spending $781 million to shore up control of brands.",
+        "date": "11:34 am"
+      },
+      {
+        "name": "AB InBev, Carlsberg bubble over in Europe",
+        "image": "./assets/images/notifications/7.jpg",
+        "message": "Beyond its Stella Artois and Corona, which posted sales growth of 21% and 18%, respectively, AB In-Bev is also seeking to ramp up sales of more expensive beers.",
+        "date": "7:12 am"
+      }
+  ]
+}

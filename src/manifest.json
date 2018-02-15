@@ -1,0 +1,13 @@
+{
+  "name": "HeinekenMobileApp",
+  "short_name": "ionHeinekenApp",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [{
+    "src": "assets/img/appicon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "background_color": "#005d1f",
+  "theme_color": "#005d1f"
+}

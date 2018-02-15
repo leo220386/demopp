@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <span>{{ feed.category.title }}</span>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="feed-content">
+  <div class="feed-item">
+    <ion-card>
+      <preload-image [ratio]="{w:1, h:.6}" [src]="feed.category.storeImg" title="feed.category.store"></preload-image>
+      <preload-image [ratio]="{w:3, h:3}" [src]="feed.category.image" title="feed.category.title"></preload-image>
+      <ion-card-content>
+        <ion-card-title class="item-title">
+          {{feed.category.price}}
+        </ion-card-title>
+        <p class="item-text">
+          {{feed.category.desc}}
+        </p>
+      </ion-card-content>
+	  <!--
+      <ion-row no-padding class="actions-row">
+        <ion-col no-padding width-30 text-left>
+          <button class="action-button" ion-button clear small icon-left>
+            <ion-icon isActive="{{post.liked}}" name='heart'></ion-icon>
+            {{post.likes}} {{'LIKES' | translate}}
+          </button>
+        </ion-col>
+        <ion-col no-padding width-45 text-center>
+          <button class="action-button" ion-button clear small icon-left>
+            <ion-icon name='chatbubbles'></ion-icon>
+            {{post.comments}} {{'COMMENTS' | translate}}
+          </button>
+        </ion-col>
+        <ion-col no-padding width-25 text-right>
+          <button class="action-button" ion-button clear small (click)="sharePost(post)" icon-left>
+            <ion-icon name='share-alt'></ion-icon>
+            {{'SHARE' | translate}}
+          </button>
+        </ion-col>
+      </ion-row>
+	  -->
+    </ion-card>
+  </div>
+  <h4 class="categories-title">{{'SIMILAR_PRODUCTS' | translate}}</h4>
+  <ion-row class="grid-categories">
+    <ion-col width-50 class="category-item" *ngFor="let category of listing.categories">
+      <background-image tappable class="category-heading" [src]="category.image" (click)="goToFeed(category)">
+        <ion-row class="heading-row">
+          <ion-col no-padding width-100>
+			</ion-col>
+        </ion-row>
+      </background-image>
+    </ion-col>
+  </ion-row>
+</ion-content>

@@ -1,0 +1,8 @@
+{
+  "name": "HeinekenMobileApp",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  },
+  "app_id": "eae55839"
+}
