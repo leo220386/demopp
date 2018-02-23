@@ -17,22 +17,6 @@
           <ion-item-divider class="notifications-divider">{{branProduct.Brand}}</ion-item-divider>
 
           <ion-list>
-              <button class="list-item" ion-item *ngFor="let prod of branProduct.Products">
-                <ion-row no-padding class="content-row">
-                  <ion-col no-padding width-33 class="item-avatar">
-                    <preload-image class="avatar-image" [ratio]="{w:1, h:1}" [src]="pro.Min.Photo"></preload-image>
-                    <p class="item-description" rows="1">{{prod.Min.Description}}</p>
-                  </ion-col>
-                  <ion-col no-padding width-33 class="item-content">
-                    <h3 class="item-title">{{prod.Min.Price}}</h3>
-                    <p class="item-description" rows="1">{{item.Min.Store}}</p>
-                  </ion-col>
-                  <ion-col no-padding width-33 class="item-content">
-                      <h3 class="item-title">{{prod.Max.Price}}</h3>
-                      <p class="item-description" rows="1">{{item.Max.Store}}</p>
-                  </ion-col>
-                </ion-row>
-              </button>
             </ion-list>
             
         </ion-item-group>
