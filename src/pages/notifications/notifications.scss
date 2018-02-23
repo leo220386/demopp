@@ -1,12 +1,36 @@
 notifications-page {
+	.header-logo
+	{
+		width: 120px;
+		height: 37px;
+	}
+	
+	.header-logo img
+	{
+		height: 37px;
+	}
+	
+	.header-logo preload-image
+	{
+		padding-bottom: 7vh !important;
+	}
+
 	.notifications-content
 	{
+		.label-md {
+			font-weight: bolder;
+		}
+
+		.ion-label {
+			font-size: 14px;
+		}
+
 		.notifications-divider
 		{
 			font-size: 1.2rem;
 			font-weight: 500;
 			letter-spacing: 0.9px;
-			color: $theme-color-3;
+			color: $text-color;
 
 			&:not(:first-child)
 			{
@@ -49,7 +73,7 @@ notifications-page {
 			.item-title
 			{
 				font-size: 1.4rem;
-				font-weight: 500;
+				font-weight: bold !important;
 				letter-spacing: 0.2px;
 				color: $theme-color-2;
 				margin-bottom: 4px;
@@ -59,7 +83,7 @@ notifications-page {
 			{
 				font-size: 1.2rem;
 				letter-spacing: 0.2px;
-				color: $white-d;
+				color: $text-color;
 				text-overflow: initial;
 			  overflow: initial;
 			  white-space: initial;
@@ -69,7 +93,7 @@ notifications-page {
 			{
 				font-size: 1.2rem;
 				font-weight: 500;
-				color: $white-d;
+				color: $text-color;
 				margin: 0px;
 				padding-left: 8px;
 				@include align-self(flex-start);

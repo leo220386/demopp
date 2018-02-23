@@ -7,7 +7,7 @@ walkthrough-page {
 	.walkthrough-content
 	{
 		// Default background when bouncing isn't disabled
-		background-image: url(https://www.heineken.com/browser-resources/img/backgrounds/body/bg-agegateway.jpg);
+		background-image: url(../assets/images/bg.png);
 
 		.scroll-content
 		{
@@ -16,12 +16,12 @@ walkthrough-page {
 
 		ion-slide:nth-child(odd)
 		{
-			background-image: url(https://www.heineken.com/browser-resources/img/backgrounds/body/bg-agegateway.jpg);
+			background-image: url(../assets/images/bg.png);
 		}
 
 		ion-slide:nth-child(even)
 		{
-			background-image: url(https://www.heineken.com/browser-resources/img/backgrounds/body/bg-agegateway.jpg);
+			background-image: url(../assets/images/bg.png);
 		}
 
 		.swiper-pagination-bullet
@@ -51,13 +51,13 @@ walkthrough-page {
 			.main-title
 			{
 				margin: 35px 20px 20px;
-				font-size: 3.4rem;
-				font-weight: 900;
+				font-size: 2rem;
+				font-weight: 800;
 				font-style: italic;
 				text-align: center;
 				color: $white;
 			}
-
+			
 			.intro-text
 			{
 				margin: 0px 20%;

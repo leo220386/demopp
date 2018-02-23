@@ -1,36 +1,36 @@
 import { Component } from '@angular/core';
-import { NavController, LoadingController } from 'ionic-angular';
+import { NavController, NavParams, LoadingController } from 'ionic-angular';
 
 import 'rxjs/Rx';
 
-import { List1Model } from './list-1.model';
-import { List1Service } from './list-1.service';
+import { BeerModel } from '../walkthrough/beer.model';
 
 @Component({
   selector: 'list-1-page',
   templateUrl: 'list-1.html'
 })
 export class List1Page {
-  list1: List1Model = new List1Model();
+  beer : BeerModel = new BeerModel();
   loading: any;
 
   constructor(
     public nav: NavController,
-    public list1Service: List1Service,
-    public loadingCtrl: LoadingController
+    public navParams: NavParams,
+    public loadingCtrl: LoadingController,
   ) {
+    var beer =  this.navParams.get('data');
+    for(var i = 0 ; i<beer.BrandProducts.length; i++){
+      var b = beer.BrandProducts[i];
+      b.Min = b.StorePrices[0];
+      if(b.StorePrices.length>1){
+        
+      }
+      for(var  = 0 ; i<beer.BrandProducts.length; i++){
+      
+      }  
+    }
+    this.beer = beer;
     this.loading = this.loadingCtrl.create();
   }
-
-  ionViewDidLoad() {
-    this.loading.present();
-    this.list1Service
-      .getData()
-      .then(data => {
-        this.list1.items = data.items;
-        this.loading.dismiss();
-      });
-  }
-
 
 }

@@ -22,10 +22,11 @@ $black-b: lighten($black, 20%);
 $black-c: lighten($black, 40%);
 $black-d: lighten($black, 60%);
 
-$theme-color-1: #005d1f;
-$theme-color-2: #005d1f;
-$theme-color-3: #005d1f;
-$bar: #101417;
+$theme-color-1: #DA125F;
+$theme-color-2: #DA125F;
+$theme-color-3: #ffffff;
+$bar: #3c1E67;
+$text-color: #646464;
 
 // Named Color Variables
 // --------------------------------------------------
@@ -36,7 +37,7 @@ $bar: #101417;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #005d1f,
+  primary:    #DA125F,
   secondary:  #32db64,
   danger:     #f4344f,
   light:      #f4f4f4,

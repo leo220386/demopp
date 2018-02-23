@@ -1,5 +1,5 @@
 ## Documentation
-https://bit.ly/ion2fullapp-elite-version-documentation
+https://bit.ly/Cerch-elite-version-documentation
 
 # Workflow
 ##To run your app in the browser (great for initial development):

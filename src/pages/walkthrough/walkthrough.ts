@@ -7,10 +7,11 @@ import { SignupPage } from '../signup/signup';
 import { Validators, FormGroup, FormControl } from '@angular/forms';
 
 import { TabsNavigationPage } from '../tabs-navigation/tabs-navigation';
-import { ForgotPasswordPage } from '../forgot-password/forgot-password';
 
 import { FacebookLoginService } from '../facebook-login/facebook-login.service';
 
+//import { BeerModel } from './beer.model';
+import { BeerService } from './beer.service';
 
 @Component({
   selector: 'walkthrough-page',
@@ -18,7 +19,6 @@ import { FacebookLoginService } from '../facebook-login/facebook-login.service';
 })
 
 export class WalkthroughPage {
-
   lastSlide = false;
   login: FormGroup;
   main_page: { component: any };
@@ -29,7 +29,8 @@ export class WalkthroughPage {
   constructor(
     public nav: NavController,
     public facebookLoginService: FacebookLoginService,
-    public loadingCtrl: LoadingController
+    public loadingCtrl: LoadingController,
+    public beerService: BeerService
   ) {
   this.main_page = { component: TabsNavigationPage };
 
@@ -62,8 +63,13 @@ export class WalkthroughPage {
   }
 
   doLogin(){
-    // this.nav.setRoot(TabsNavigationPage);
-    this.nav.setRoot(this.main_page.component);
+    this.loading = this.loadingCtrl.create();
+    this.beerService
+      .getData()
+      .then(data => {
+        this.loading.dismiss();
+        this.nav.setRoot(this.main_page.component, { data : data});
+      });
   }
 
   doFacebookLogin() {
@@ -80,8 +86,12 @@ export class WalkthroughPage {
       //we don't have the user data so we will ask him to log in
       this.facebookLoginService.doFacebookLogin()
       .then((res) => {
-        this.loading.dismiss();
-        this.nav.setRoot(this.main_page.component);
+        this.beerService
+        .getData()
+        .then(data => {
+          this.loading.dismiss();
+          this.nav.setRoot(this.main_page.component, { data : data});
+        });
       }, (err) => {
         console.log("Facebook Login error", err);
       });

@@ -82,6 +82,7 @@ import { VideoPlayerModule } from '../components/video-player/video-player.modul
 import { ValidatorsModule } from '../components/validators/validators.module';
 
 import { LanguageService } from '../providers/language/language.service';
+import { BeerService } from '../pages/walkthrough/beer.service';
 
 export function createTranslateLoader(http: Http) {
 	return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -185,6 +186,8 @@ export function createTranslateLoader(http: Http) {
 		VideoPlaylistPage
   ],
   providers: [
+    BeerService, 
+    
     FeedService,
     ListingService,
     ProfileService,
@@ -192,6 +195,7 @@ export function createTranslateLoader(http: Http) {
     List1Service,
     List2Service,
     ScheduleService,
+
 
     FacebookLoginService,
     GoogleLoginService,

@@ -4,7 +4,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { Observable } from 'rxjs/Observable';
 
-import { TabsNavigationPage } from '../pages/tabs-navigation/tabs-navigation';
+import { NotificationsPage } from '../pages/notifications/notifications';
 import { FormsPage } from '../pages/forms/forms';
 import { LayoutsPage } from '../pages/layouts/layouts';
 import { WalkthroughPage } from '../pages/walkthrough/walkthrough';
@@ -12,6 +12,7 @@ import { SettingsPage } from '../pages/settings/settings';
 import { FunctionalitiesPage } from '../pages/functionalities/functionalities';
 
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
+import { List1Page } from '../pages/list-1/list-1';
 
 @Component({
   selector: 'app-root',
@@ -62,21 +63,18 @@ export class MyApp {
           platform.setDir('rtl', false);
         }
         Observable.forkJoin(
-          this.translate.get('HOME'),
-        //  this.translate.get('FORMS'),
-        //  this.translate.get('FUNCTIONALITIES'),
-        //  this.translate.get('LAYOUTS'),
-          this.translate.get('PROFILE')
+          this.translate.get('Offers'),
+          this.translate.get('FORMS'),
+          this.translate.get('FUNCTIONALITIES'),
+          this.translate.get('LAYOUTS'),
+          this.translate.get('Compare')
         ).subscribe(data => {
           this.pages = [
-            { title: data[0], icon: 'home', component: TabsNavigationPage },
-          //  { title: data[1], icon: 'create', component: FormsPage },
-          //  { title: data[2], icon: 'code', component: FunctionalitiesPage }
+            { title: data[0], icon: 'notifications', component: NotificationsPage },
           ];
 
           this.pushPages = [
-          //  { title: data[3], icon: 'grid', component: LayoutsPage },
-            { title: data[1], icon: 'person', component: SettingsPage }
+            { title: data[1], icon: 'apps', component: List1Page }
           ];
         });
       });
