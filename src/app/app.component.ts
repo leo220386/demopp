@@ -1,5 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
-import { Platform, MenuController, Nav, App, ToastController } from 'ionic-angular';
+import { Platform, MenuController, Nav, NavParams, App, ToastController, LoadingController } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 import { Observable } from 'rxjs/Observable';
@@ -14,13 +14,18 @@ import { FunctionalitiesPage } from '../pages/functionalities/functionalities';
 import { TranslateService, LangChangeEvent } from '@ngx-translate/core';
 import { List1Page } from '../pages/list-1/list-1';
 
+import { BeerModel } from '../pages/walkthrough/beer.model';
+import { BeerService } from '../pages/walkthrough/beer.service';
+
 @Component({
   selector: 'app-root',
   templateUrl: 'app.html'
 })
 export class MyApp {
 
+  beer : BeerModel = new BeerModel();
   @ViewChild(Nav) nav: Nav;
+  loading: any;
 
   // make WalkthroughPage the root (or first) page
   rootPage: any = WalkthroughPage;
@@ -38,7 +43,9 @@ export class MyApp {
     public splashScreen: SplashScreen,
     public statusBar: StatusBar,
     public translate: TranslateService,
-    public toastCtrl: ToastController
+    public toastCtrl: ToastController,
+    public beerService: BeerService,
+    public loadingCtrl: LoadingController
   ) {
     translate.setDefaultLang('en');
     translate.use('en');
@@ -70,10 +77,10 @@ export class MyApp {
           this.translate.get('Compare')
         ).subscribe(data => {
           this.pages = [
-            { title: data[0], icon: 'notifications', component: NotificationsPage },
           ];
 
           this.pushPages = [
+            { title: data[0], icon: 'notifications', component: NotificationsPage },
             { title: data[1], icon: 'apps', component: List1Page }
           ];
         });
@@ -81,17 +88,41 @@ export class MyApp {
 
   }
 
-  openPage(page) {
+  fullOpenPage(page, setRoot : boolean){
     // close the menu when clicking a link from the menu
     this.menu.close();
-    // navigate to the new page if it is not the current page
-    this.nav.setRoot(page.component);
+    if((!this.beer) || (!this.beer.BrandProducts) || (this.beer.BrandProducts.length==0)) {
+      this.loading = this.loadingCtrl.create();
+      this.loading.present();
+      this.beerService
+        .getData()
+        .then(data => {
+          this.beer = data;
+          this.loading.dismiss();
+          if(setRoot){
+          // navigate to the new page if it is not the current page
+            this.nav.setRoot(page.component, {data: this.beer});
+          }else{
+            // rootNav is now deprecated (since beta 11) (https://forum.ionicframework.com/t/cant-access-rootnav-after-upgrade-to-beta-11/59889)
+            this.app.getRootNav().push(page.component, {data: this.beer});
+          }
+        });  
+    }else{
+      if(setRoot){
+        // navigate to the new page if it is not the current page
+          this.nav.setRoot(page.component, {data: this.beer});
+        }else{
+          // rootNav is now deprecated (since beta 11) (https://forum.ionicframework.com/t/cant-access-rootnav-after-upgrade-to-beta-11/59889)
+          this.app.getRootNav().push(page.component, {data: this.beer});
+        }
+    }
+  }
+
+  openPage(page) {
+    this.fullOpenPage(page, true);
   }
 
   pushPage(page) {
-    // close the menu when clicking a link from the menu
-    this.menu.close();
-    // rootNav is now deprecated (since beta 11) (https://forum.ionicframework.com/t/cant-access-rootnav-after-upgrade-to-beta-11/59889)
-    this.app.getRootNav().push(page.component);
+    this.fullOpenPage(page, false);
   }
 }
