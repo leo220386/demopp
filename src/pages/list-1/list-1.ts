@@ -38,4 +38,7 @@ export class List1Page {
     this.loading = this.loadingCtrl.create();
   }
 
+  openInAppBrowser(website: string){
+    this.inAppBrowser.create(website, '_blank', "location=yes");
+  }
 }

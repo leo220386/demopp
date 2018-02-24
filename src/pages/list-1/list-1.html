@@ -14,7 +14,7 @@
 <ion-content class="list-big-content">
     <div class="list-big">
       <ion-item-group  *ngFor="let branProduct of beer.BrandProducts">
-        <ion-item-divider class="notifications-divider">{{branProduct.Brand}}</ion-item-divider>
+        <ion-item-divider class="notifications-divider">{{branProduct.Brand | uppercase}}</ion-item-divider>
         <ion-list>
             <ion-item class="list-item" ion-item *ngFor="let prod of branProduct.Products">
                 <ion-row no-padding class="content-row">
