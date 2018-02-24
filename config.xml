@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.startapplabs.Cerch.elite" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.startapplabs.cerch.elite" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>Cerch</name>
     <description>Cerch</description>
     <author email="devs@tmconsulting.com" href="https://tmconsulting.com">Ionic</author>
@@ -45,6 +45,10 @@
         <splash density="port-xhdpi" src="resources/android/splash/drawable-port-xhdpi-screen.png" />
         <splash density="port-xxhdpi" src="resources/android/splash/drawable-port-xxhdpi-screen.png" />
         <splash density="port-xxxhdpi" src="resources/android/splash/drawable-port-xxxhdpi-screen.png" />
+        <config-file parent="/resources" target="./res/values/strings.xml">
+            <string name="fb_app_id">219162828646639</string>
+            <string name="fb_app_name">Cerch</string>
+        </config-file>
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
@@ -82,16 +86,10 @@
         <icon height="1024" src="resources/ios/icon/icon-1024.png" width="1024" />
         <splash height="2732" src="resources/ios/splash/Default@2x~universal~anyany.png" width="2732" />
     </platform>
-    <plugin name="cordova-plugin-admob-free" spec="^0.9.0" />
     <plugin name="cordova-plugin-apprate" spec="^1.3.0" />
-    <plugin name="cordova-plugin-console" spec="^1.0.7" />
     <plugin name="cordova-plugin-crop" spec="^0.3.1" />
     <plugin name="cordova-plugin-device" spec="^1.1.6" />
     <plugin name="cordova-plugin-email-composer" spec="^0.8.9" />
-    <plugin name="cordova-plugin-facebook4" spec="^1.9.1">
-        <variable name="APP_ID" value="826720427470540" />
-        <variable name="APP_NAME" value="Cerch" />
-    </plugin>
     <plugin name="cordova-plugin-geolocation" spec="^2.4.3">
         <variable name="GEOLOCATION_USAGE_DESCRIPTION" value=" " />
     </plugin>
@@ -108,6 +106,11 @@
     <plugin name="twitter-connect-plugin" spec="^0.6.0">
         <variable name="FABRIC_KEY" value="6da298eb1112d28ba03183d50236498db4b7380e" />
     </plugin>
-    <engine name="android" spec="^6.2.3" />
+    <plugin name="cordova-plugin-facebook4" spec="^1.9.1">
+        <variable name="APP_ID" value="219162828646639" />
+        <variable name="APP_NAME" value="Cerch" />
+    </plugin>
+    <plugin name="lycwed-cordova-plugin-admob-free" spec="https://github.com/RenaudROHLINGER/lycwed-cordova-plugin-admob-free" />
     <engine name="ios" spec="^4.4.0" />
+    <engine name="android" spec="~7.0.0" />
 </widget>

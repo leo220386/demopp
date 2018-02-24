@@ -42,13 +42,10 @@
     "@types/googlemaps": "3.25.38",
     "angular2-text-mask": "8.0.1",
     "bourbon": "4.2.7",
-    "cordova-admob-sdk": "^0.7.0",
-    "cordova-android": "^6.2.3",
+    "cordova-android": "~7.0.0",
     "cordova-ios": "^4.4.0",
-    "cordova-plugin-admob-free": "^0.9.0",
     "cordova-plugin-apprate": "^1.3.0",
     "cordova-plugin-compat": "^1.2.0",
-    "cordova-plugin-console": "^1.1.0",
     "cordova-plugin-crop": "^0.3.1",
     "cordova-plugin-device": "^1.1.7",
     "cordova-plugin-dialogs": "^1.3.4",
@@ -69,6 +66,7 @@
     "ionic-angular": "3.6.0",
     "ionic-plugin-keyboard": "^2.2.1",
     "ionicons": "3.0.0",
+    "lycwed-cordova-plugin-admob-free": "git+https://github.com/RenaudROHLINGER/lycwed-cordova-plugin-admob-free.git",
     "rxjs": "5.4.0",
     "sw-toolbox": "3.6.0",
     "text-mask-addons": "3.5.1",
@@ -87,11 +85,10 @@
   "cordova": {
     "plugins": {
       "cordova-plugin-apprate": {},
-      "cordova-plugin-console": {},
       "cordova-plugin-crop": {},
       "cordova-plugin-device": {},
       "cordova-plugin-facebook4": {
-        "APP_ID": "826720427470540",
+        "APP_ID": "219162828646639",
         "APP_NAME": "Cerch"
       },
       "cordova-plugin-geolocation": {
@@ -104,18 +101,18 @@
       "cordova-plugin-whitelist": {},
       "cordova-plugin-x-socialsharing": {},
       "ionic-plugin-keyboard": {},
-      "cordova-plugin-admob-free": {},
       "cordova-plugin-email-composer": {},
       "twitter-connect-plugin": {
         "FABRIC_KEY": "6da298eb1112d28ba03183d50236498db4b7380e"
       },
       "cordova-plugin-googleplus": {
         "REVERSED_CLIENT_ID": "com.googleusercontent.apps.1092390853283-icg6lqtcg6k270de9c8tv3i7qehlqtor"
-      }
+      },
+      "lycwed-cordova-plugin-admob-free": {}
     },
     "platforms": [
-      "android",
-      "ios"
+      "ios",
+      "android"
     ]
   }
 }
