@@ -21,11 +21,17 @@ export class List1Page {
     var beer =  this.navParams.get('data');
     for(var i = 0 ; i<beer.BrandProducts.length; i++){
       var b = beer.BrandProducts[i];
-      b.Min = b.StorePrices[0];
-      if(b.StorePrices.length>1){
-        b.StorePrices[b.StorePrices.length-1];
+      for(var j = 0; j < b.Products.length; j++){
+        var p = b.Products[j];
+        if(p.StorePrices.length>0){
+          p.Min = p.StorePrices[0];
+          if(p.StorePrices.length>1){
+            p.Max = p.StorePrices[p.StorePrices.length-1];
+          }
+        }
       }
     }
+    
     this.beer = beer;
     this.loading = this.loadingCtrl.create();
   }

@@ -9,20 +9,16 @@
 </ion-header>
 
 <ion-content class="walkthrough-content login-content auth-content">
-  <ion-slides #slider (ionSlideDidChange)="onSlideChanged()" pager="true">
-    <ion-slide class="slide-4">
-      <ion-row class="intro-image-row">
-        <ion-col center width-64 no-padding>
-          <preload-image [ratio]="{w:1, h:1}" src="./assets/images/inicio_logo.png" alt="Cerch - Open your world the beer" title="Cerch"></preload-image>
-        </ion-col>
-      </ion-row>
-      <h2 class="main-title">{{'Get your perfect BEER!' | translate}}</h2>
-      <br/>
-	    <br/>
-	    <br/>
-	  <button ion-button block class="facebook-auth-button" (click)="doFacebookLogin()">Log in with Facebook</button>
-	  <br/>
-      <button ion-button block class="auth-action-button login-button" (click)="doLogin()">{{'LOG_IN' | translate}}</button>
-    </ion-slide>
-  </ion-slides>
+  <ion-row class="intro-image-row">
+    <ion-col center width-64 no-padding>
+      <preload-image [ratio]="{w:1, h:1}" src="./assets/images/inicio_logo.png" alt="Cerch - Open your world the beer" title="Cerch"></preload-image>
+    </ion-col>
+  </ion-row>
+  <h2 class="main-title">{{'Get your perfect BEER!' | translate}}</h2>
+  <br/>
+  <br/>
+  <br/>
+<button ion-button block class="facebook-auth-button" (click)="doFacebookLogin()">Log in with Facebook</button>
+<br/>
+  <button ion-button block class="auth-action-button login-button" (click)="doLogin()">{{'LOG_IN' | translate}}</button>
 </ion-content>

@@ -1,4 +1,5 @@
 walkthrough-page {
+
 	.walkthrough-header
 	{
 		@include header-styles(color($colors, walkthrough-header, base), color($colors, walkthrough-header, contrast));
@@ -35,12 +36,6 @@ walkthrough-page {
 			}
 		}
 
-		ion-slides {
-
-			ion-slide {
-				@include align-items(flex-start);
-			}
-
 			.intro-image-row
 			{
 				@include justify-content(center);
@@ -66,10 +61,7 @@ walkthrough-page {
 				text-align: center;
 				color: $white;
 			}
-		}
 
-		.slide-4
-		{
 			.main-title
 			{
 				margin-top: 15px;
@@ -110,7 +102,6 @@ walkthrough-page {
 					  border-radius: 0px 6px 6px 0px;
 					}
 				}
-			}
 		}
 	}
 }

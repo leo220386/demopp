@@ -6,6 +6,35 @@ list-1-page {
 		@include header-styles(color($colors, header-alt, base), color($colors, header-alt, contrast));
 	}
 
+	.price{
+		width: 100%;
+	}
+
+	.header-logo
+	{
+		width: 176px;
+		height: 37px;
+	}
+	
+	.header-logo img
+	{
+		height: 37px;
+	}
+	
+	.header-logo preload-image
+	{
+		padding-bottom: 7vh !important;
+	}
+	
+	.item-divider-md{
+		font-weight: bolder !important	;
+		text-transform: uppercase;
+	}
+
+	.item-description{
+		color: #646464 !important;
+	}
+
 	.list-big-content
 	{
 		background-color: color($colors, background, base);
@@ -36,6 +65,7 @@ list-1-page {
 							overflow: hidden;
 							text-overflow: ellipsis;
 							white-space: nowrap;
+							font-weight: bolder;
 						}
 
 						.item-description
