@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, LoadingController } from 'ionic-angular';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 import 'rxjs/Rx';
 
@@ -17,6 +18,7 @@ export class List1Page {
     public nav: NavController,
     public navParams: NavParams,
     public loadingCtrl: LoadingController,
+    public inAppBrowser: InAppBrowser
   ) {
     var beer =  this.navParams.get('data');
     for(var i = 0 ; i<beer.BrandProducts.length; i++){

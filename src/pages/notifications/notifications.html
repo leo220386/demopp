@@ -23,8 +23,7 @@
       <h2 class="item-title">${{promoStore.Price}}.00</h2>
       <p class="item-description">{{promoStore.Description}}</p>
       <ion-note class="item-time" item-right>
-        <a href="#" onclick="window.open('{{promoStore.Link}}', '_system', 'location=yes'); return false;"> ooo </a>
-        <a [href]="promoStore.Link" target="_system">Show</a>
+        <a href="#" (click)="openInAppBrowser(promoStore.Link)">Show</a>
       </ion-note>
     </ion-item>
   </ion-item-group>

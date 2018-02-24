@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams, LoadingController } from 'ionic-angular';
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 import 'rxjs/Rx';
 
@@ -17,6 +18,7 @@ export class NotificationsPage {
     public nav: NavController,
     public navParams: NavParams,
     public loadingCtrl: LoadingController,
+    public inAppBrowser: InAppBrowser
   ) {
     this.beer = this.navParams.get('data')
     this.loading = this.loadingCtrl.create();
