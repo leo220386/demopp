@@ -64,9 +64,9 @@ export class MyApp {
         }
         Observable.forkJoin(
           this.translate.get('Offers'),
-          this.translate.get('FORMS'),
-          this.translate.get('FUNCTIONALITIES'),
-          this.translate.get('LAYOUTS'),
+         // this.translate.get('FORMS'),
+         // this.translate.get('FUNCTIONALITIES'),
+         // this.translate.get('LAYOUTS'),
           this.translate.get('Compare')
         ).subscribe(data => {
           this.pages = [
