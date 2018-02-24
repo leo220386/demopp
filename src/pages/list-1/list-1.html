@@ -33,7 +33,7 @@
                     </ion-col>
                     <ion-col no-padding width-33 class="item-content" *ngIf="prod.Max">
                         <p class="item-title price">
-                            <a href="#" (click)="openInAppBrowser(prod.Max.Link)"> ${{prod.Min.Price}}.00</a>
+                            <a href="#" (click)="openInAppBrowser(prod.Max.Link)"> ${{prod.Max.Price}}.00</a>
                          </p>
                         <p class="" rows="1">{{prod.Max.Store}}</p>
                         <p class="item-title price" *ngIf="prod.Max && prod.Max.Price > (prod.Min.Price + 5) ">
