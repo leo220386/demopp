@@ -22,6 +22,11 @@ export class NotificationsPage {
   ) {
     this.beer = this.navParams.get('data')
     this.loading = this.loadingCtrl.create();
+ 
+  }
+
+  openInAppBrowser(website: string){
+    this.inAppBrowser.create(website, '_blank', "location=yes");
   }
 
 }

@@ -16,7 +16,7 @@
       <ion-item-group  *ngFor="let branProduct of beer.BrandProducts">
         <ion-item-divider class="notifications-divider">{{branProduct.Brand}}</ion-item-divider>
         <ion-list>
-            <button class="list-item" ion-item *ngFor="let prod of branProduct.Products">
+            <ion-item class="list-item" ion-item *ngFor="let prod of branProduct.Products">
                 <ion-row no-padding class="content-row">
                     <ion-col no-padding width-33 class="item-avatar" *ngIf="prod.Min">
                         <preload-image class="avatar-image" [ratio]="{w:1, h:1}" [src]="prod.Min.Photo"></preload-image>
@@ -43,7 +43,7 @@
                         </p>
                     </ion-col>
                 </ion-row>
-            </button>
+            </ion-item>
         </ion-list>
       </ion-item-group>
     </div>
